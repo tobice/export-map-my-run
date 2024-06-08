@@ -1,4 +1,4 @@
-# Export TCX workouts from MapMyRun
+# Export TCX GPS files from MapMyRun
 
 How to use:
 

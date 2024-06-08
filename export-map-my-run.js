@@ -15,7 +15,7 @@ import {
 
 // Create download directory if it doesn't exist.
 if (!fs.existsSync(WORKOUTS_DOWNLOAD_DIR)) {
-    await mkdir("downloads");
+    await mkdir(WORKOUTS_DOWNLOAD_DIR);
     log.info("Created download directory", { WORKOUTS_DOWNLOAD_DIR });
 } else {
     log.info("Download directory already exists", { WORKOUTS_DOWNLOAD_DIR });
@@ -62,7 +62,7 @@ async function fetchWorkouts(startedAfter, startedBefore, limit) {
 
 async function downloadWorkoutTcx({ id, startDatetime }) {
     const targetFilename = `workout-${startDatetime}-${id}.tcx`;
-    const targetPath = path.resolve("./workouts/", targetFilename);
+    const targetPath = path.resolve(`./${WORKOUTS_DOWNLOAD_DIR}/`, targetFilename);
 
     // Check if the file already exists, in which case we skip it.
     if (fs.existsSync(targetPath)) {
