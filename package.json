@@ -1,0 +1,16 @@
+{
+  "name": "export-map-my-run",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "export-map-my-run.js",
+  "scripts": {
+    "start": "node export-map-my-run.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tobiáš Potoček",
+  "license": "ISC",
+  "dependencies": {
+    "@apify/log": "^2.5.1"
+  }
+}
